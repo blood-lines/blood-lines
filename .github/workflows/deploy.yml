@@ -32,6 +32,8 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
+          projectPath: src/BloodLines
+          unityVersion: 2020.3.9f1
           targetPlatform: WebGL
 
       - name: Deploy
