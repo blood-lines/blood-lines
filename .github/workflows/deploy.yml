@@ -42,6 +42,6 @@ jobs:
           token: ${{ secrets.DEPLOY_TOKEN }}
           repository-name: blood-lines/blood-lines.github.io
           branch: gh-pages
-          folder: build
+          folder: build/WebGL/WebGL
           commit-message: Export
           single-commit: true
