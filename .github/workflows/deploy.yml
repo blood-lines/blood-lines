@@ -23,7 +23,7 @@ jobs:
       # Cache
       - uses: actions/cache@v2
         with:
-          path: Library
+          path: src/BloodLines/Library
           key: Library
 
       # Build
