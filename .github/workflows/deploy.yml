@@ -39,6 +39,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
+          token: ${{ secrets.DEPLOY_TOKEN }}
           repository-name: blood-lines/blood-lines.github.io
           branch: gh-pages
           folder: build
