@@ -27,7 +27,7 @@ public class Genome
         return new Pair<Allele>();
     }
 
-    public List<Chromosome> Meiosis()
+    public List<Chromosome> CreateGamete()
     {
         const double minRecombinationRate = 0;
         const double maxRecombinationRate = 0.5;
@@ -49,12 +49,12 @@ public class Genome
         return chromosomes;
     }
 
-    public static Genome ProduceOffspring(Genome first, Genome second)
+    public static Genome CreateZygote(Genome first, Genome second)
     {
-        var firstChromosomes = first.Meiosis();
-        var secondChromosomes = second.Meiosis();
-        var chromosomePairs = firstChromosomes.Zip(
-            secondChromosomes,
+        var firstGamete = first.CreateGamete();
+        var secondGamete = second.CreateGamete();
+        var chromosomePairs = firstGamete.Zip(
+            secondGamete,
             (c1, c2) => new Pair<Chromosome>(c1, c2)
         );
 
